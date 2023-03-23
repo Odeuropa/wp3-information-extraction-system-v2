@@ -1,0 +1,18 @@
+Geruch_noun, Gerüche_noun, Geruchs_noun, Geruches_noun, Gerüchen_noun
+Gestank_noun, Gestanke_noun, Gestanks_noun, Gestankes_noun, Gestanken_noun
+Aroma_noun, Aromen_noun, Aromas_noun
+Parfum_noun, Parfüm_noun, Parfums_noun, Parfume_noun, Parfumen_noun, Parfüms_noun, Parfüme_noun, Parfümen_noun
+Duft_noun, Duftes_noun, Düfte_noun, Düften_noun
+riechen_verb, rieche_verb, riechst_verb, riecht_verb, roch_verb, rochst_verb, roch_verb, rochen_verb, rocht_verb, gerochen_verb, gerochenen_verb, gerochene_verb, gerochener_verb, gerochenes_verb, gerochenem_verb, riechest_verb, riechet_verb, röche_verb, röchest_verb, röchen_verb, röchet_verb, riech_verb
+stinken_verb, stinke_verb, stinkst_verb, stinkt_verb, stank_verb, stankst_verb, stanken_verb, gestunken_verb, stinkest_verb, stinket_verb, stänke_verb, stänkest_verb, stänken_verb, stänket_verb, stink_verb
+schnüffeln_verb, schnüffle_verb, schnüffelst_verb, schnüfflest_verb, schnüfflen_verb, schnüffelt_verb, schnüffelte_verb, schnüffeltest_verb, schnüffelten_verb, schnüffeltet_verb, geschnüffelt_verb, schnüffelt_verb, schnüffelnd_verb, schnüffelnde_verb, schnüffelnden_verb, schnüffelndem_verb, schnüffelndes_verb, schnüffelndem_verb
+schnuppern_verb, schnuppere_verb, schnupperst_verb, schnuppert_verb, schnupperte_verb, schnuppertest_verb, schnupperten_verb, schnuppertet_verb, geschnuppert_verb, schnupperest_verb, schnuppernd_verb, schnuppernde_verb, schnuppernden_verb, schnupperndes_verb, schnupperndem_verb, schnuppernde_verb, geschnupperte_verb, geschnupperten_verb, geschnuppertem_verb, geschnuppertes_verb, geschnupperter_verb
+parfümieren_verb, parfümiere_verb, parfümierst_verb, parfümiert_verb, parfümierte_verb, parfümiertest_verb, parfümierten_verb, parfümiertet_verb, parfümierten_verb, parfümierest_verb, parfümieret_verb, parfümierte_verb, parfümiertet_verb, parfümierten_verb, parfümierend_verb, parfümierte_verb, parfümierten_verb, parfümiertem_verb, parfümiertes_verb
+duften_verb, dufte_verb, duftest_verb, duftet_verb, duftete_verb, duftetest_verb, dufteten_verb, duftetet_verb, geduftet_verb, gedufteten_verb, geduftete_verb, geduftetes_verb, geduftetem_verb
+ausdünsten_verb, ausgedünstet_verb, ausgedünstete_verb, ausgedünsteten_verb, ausgedünstetem_verb, ausgedünstetes_verb, ausgedünsteter_verb
+parfümiert_adj, parfümierte_adj, parfümierter_adj, parfümiertes_adj, parfümierten_adj, parfümiertem_adj
+olfaktorisch_adj, olfaktorische_adj, olfaktorischer_adj, olfaktorisches_adj, olfaktorischen_adj, olfaktorischem_adj
+wohlriechend_adj, wohlriechende_adj, wohlriechender_adj, wohlriechendes_adj, wohlriechenden_adj, wohlriechendem_adj
+stinkend_adj, stinkende_adj, stinkender_adj, stinkendes_adj, stinkenden_adj, stinkendem_adj
+duftend_adj, duftende_adj, duftender_adj, duftendes_adj, duftenden_adj, duftendem_adj
+riechend_adj, riechende_adj, riechender_adj, riechendes_adj, riechenden_adj, riechendem_adj
