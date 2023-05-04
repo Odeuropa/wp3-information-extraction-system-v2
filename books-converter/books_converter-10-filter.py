@@ -9,7 +9,9 @@ from tqdm import tqdm
 parser = argparse.ArgumentParser()
 parser.add_argument("--folder", help="Input folder containing texts", metavar="FOLDER", required=True)
 parser.add_argument("--output", help="Output folder", metavar="FOLDER", required=True)
+parser.add_argument("--seeds", help="Seeds list file", required=True)
 parser.add_argument("--books", help="Number of books to aggregate", metavar='N', type=int, default=100, required=False)
+parser.add_argument("--window", help="Number of sentences to keep around each smell word", metavar='N', type=int, default=3, required=False)
 parser.add_argument("--label", help="NLabel for the ID", type=str, required=True)
 
 args = parser.parse_args()
@@ -18,6 +20,8 @@ path = args.folder
 booksnumber = args.books
 outPath = args.output
 labelID = args.label
+window_size = args.window
+seedListFile = args.seeds
 
 isExist = os.path.exists(outPath)
 if not isExist:
@@ -31,14 +35,15 @@ metaFileName = "mapping-" + metaFileName + ".tsv"
 book_counter = 0
 out_name_counter = 0
 
-window_size = 3
+
 
 def intersection(lst1, lst2):
     lst3 = [value for value in lst1 if value in lst2]
     return lst3
 
 seed_list = []
-with open ('SeedLists/seed-en-pos.txt','r') as fileSeeds:
+# with open ('SeedLists/seed-en-pos.txt','r') as fileSeeds:
+with open (seedListFile,'r') as fileSeeds:
     for line in fileSeeds:
         line = line.strip("\n")
         parts = line.split(",")
