@@ -31,6 +31,8 @@ python3 books_converter-10-filter.py --folder books_folder --output output_folde
 
 The folder `run-predictions`  contains the classifier (`predict.py`) to extract the smell sources from the books converted in the previous step.
 
+Before running the script download the model in your language form here https://drive.google.com/drive/u/1/folders/1HRfiE3atNbXHIfj8mjXNiPJPZCxSmHky and move it in `run-predictions/models` folder.
+
 The code has ben tested with python 3.8. To install the required packages, in `run-predictions` folder run:
 ```
 pip install -r requirements.txt
@@ -71,5 +73,5 @@ pip install -r requirements.txt
 
 Usage example:
 ```
- python3 extract-annotations.py --folder ../run-predictions/predictions/ --output test-frames.tsv
+python3 extract-annotations.py --folder ../run-predictions/predictions/ --output test-frames.tsv
 ```
