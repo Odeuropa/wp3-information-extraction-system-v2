@@ -42,7 +42,7 @@ def intersection(lst1, lst2):
     return lst3
 
 seed_list = []
-# with open ('SeedLists/seed-en-pos.txt','r') as fileSeeds:
+
 with open (seedListFile,'r') as fileSeeds:
     for line in fileSeeds:
         line = line.strip("\n")
@@ -54,7 +54,7 @@ print(seed_list)
 for root, dirs, files in os.walk(path):
     print(root)
     for name in tqdm(files, total=len(files)):
-        # for name in files:
+        
             if name.endswith(".txt"):
 
                 with open(os.path.join(root, name), 'r') as f:
@@ -93,21 +93,10 @@ for root, dirs, files in os.walk(path):
                                 book_sentences_list.append(tmp_sentence)
                                 tmp_sentence=[]
                         
-                        #     tokenID = str(sentence_counter) + "-" + str(word_counter)
-                        #     outFile.write(labelID + str(book_counter) + "\t" + tokenID + "\t-\t" + token + "\tO\tO\tO\tO\tO\tO\tO\tO\tO\tO\n")
-                        #     # outFile.write(labelID + str(book_counter) + "\t" + tokenID + "\t-\t" + token + "\n")
-
-                        #     word_counter += 1
-                        #     if token == ".":
-                        #         word_counter = 1
-                        #         sentence_counter += 1
-                        #         outFile.write("\n")
-                    
                     
                     for sentence in enumerate(book_sentences_list):
                         lowlist= [x.lower() for x in sentence[1]]
                         overlap = intersection(lowlist,seed_list)
-                        # overlap = intersection(sentence[1],seed_list)
                         if len(overlap) > 0:
                             for i in range(sentence[0]-window_size, sentence[0]+window_size+1):
                                 index_to_print[i] = True

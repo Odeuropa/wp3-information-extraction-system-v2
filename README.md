@@ -6,6 +6,9 @@
 The script in he folder `books-converter` converts plain texts to the format used for the multitask classification.
 Run the script `books_converter.py` on the folder containing the documents you want to use to extract frame elements and convert them in a format readable by the classifier.
 
+__`IMPORTANT:`__ The converter script filters the books by keeping only portions of text (parameter `--window`) around the seedwords. The SeedLists folder contains the seed lists from the beginning of the Odeuropa project. To ensure you don't miss relevant text or you don't introduce excessive noise in the data __`before running the script fix the seed list in your language`__. You can use English of French files as examples of the format required by the script.
+
+
 `--folder`: The input folder containing the books/document (plain txt, no metadata or tags)
 
 `--output`: The output folder for the converted documents
@@ -24,15 +27,14 @@ The script creates a -mapping file outside the output folder to map the document
 Usage example:
 
 ```
-python3 books_converter-10-filter.py --folder books_folder --output output_folder --seeds SeedLists/seed-en-pos.txt --label abc --books 1000
+python3 books_converter-filter.py --folder books_folder --output output_folder --seeds SeedLists/seed-en-pos.txt --label abc --books 1000
 ```
 
 ## __Step 2 - Smells Prediction__
 
 The folder `run-predictions`  contains the classifier (`predict.py`) to extract the smell sources from the books converted in the previous step.
 
-Before running the script download the model in your language form here: https://drive.google.com/drive/u/1/folders/1HRfiE3atNbXHIfj8mjXNiPJPZCxSmHky 
-and move it in `run-predictions/models` folder.
+Before running the script download the model in your language form here https://drive.google.com/drive/u/1/folders/1HRfiE3atNbXHIfj8mjXNiPJPZCxSmHky and move it in `run-predictions/models` folder.
 
 The code has ben tested with python 3.8. To install the required packages, in `run-predictions` folder run:
 ```
@@ -47,7 +49,7 @@ The models for each language are in the folder `models`.
 
 The folder `test-files` contains a sample file for each language to test if the classifier works.
 
-Usage example:
+Usage examples:
 ```
 mkdir predictions
 ```
@@ -76,11 +78,3 @@ Usage example:
 ```
 python3 extract-annotations.py --folder ../run-predictions/predictions/ --output test-frames.tsv
 ```
-
-
-## Funding acknowledgement
-
-<img src="https://github.com/Odeuropa/.github/raw/main/profile/eu-logo.png" width="80" height="54" align="left" alt="EU logo" />
-
-This work has been realised in the context of [Odeuropa](https://odeuropa.eu/), a research project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 101004469.
-
