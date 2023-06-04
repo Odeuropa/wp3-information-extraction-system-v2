@@ -6,7 +6,7 @@
 The script in he folder `books-converter` converts plain texts to the format used for the multitask classification.
 Run the script `books_converter.py` on the folder containing the documents you want to use to extract frame elements and convert them in a format readable by the classifier.
 
-__`IMPORTANT:`__ The converter script filters the books by keeping only portions of text (parameter `--window`) around the seedwords. The SeedLists folder contains the seed lists from the beginning of the Odeuropa project. To ensure you don't miss relevant text or you don't introduce excessive noise in the data __`before running the script fix the seed list in your language`__. You can use English of French files as examples of the format required by the script.
+__`IMPORTANT:`__ The converter script filters the books by keeping only portions of text (parameter `--window`) around the seedwords. The SeedLists folder contains the seed lists from the beginning of the Odeuropa project. To ensure you don't miss relevant text or you don't introduce excessive noise in the data __`before running the script fix the seed list in your language`__. You can use English of French files as examples of the format required by the script. __`The script doesn't lemmatize, so you need to add all the inflected forms of the seeds to the list.`__
 
 
 `--folder`: The input folder containing the books/document (plain txt, no metadata or tags)
