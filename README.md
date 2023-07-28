@@ -43,20 +43,19 @@ pip install -r requirements.txt
 
 The script takes as argument in order: `model`, `file to predict`, `output file` (containing the predictions)
 
-Optional: `--device` to select the gpu to be used.
+Optional: `--device` to select the gpu to be used. 0 for CUDA based GPUs, 1 for MPS (Apple M1/M2 chips) or -1 for CPU. 
 
 The models for each language are in the folder `models`.
 
 The folder `test-files` contains a sample file for each language to test if the classifier works.
 
 Usage examples:
-```
-mkdir predictions
-```
 
 ```
-python3 predict.py models/fr.pt test-files/test-fr.tsv predictions/predictions-test-fr.tsv --device 0
+python3 predict.py models/en.pt test-files/test-en.tsv predictions/predictions-test-en.tsv --device 0
 ```
+
+The file predictions/sample-predictions-test-en.tsv shows the correct output to check your system output against.  
 
 __Disclaimer:__ *The multitask classifier uses machamp framework. The code in `run-predictions` contains selected parts of the framework, modified for the purpose of Odeuropa Project. If you need to use the framework get the official version at https://github.com/machamp-nlp/machamp*
 
