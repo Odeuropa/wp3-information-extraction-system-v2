@@ -44,11 +44,17 @@ class F1:
 
         preds = preds.cpu()
         preds.apply_(lambda x: self.labels_mapping[x])
-        preds = preds.cuda()
+        if torch.backends.mps.is_available():
+            preds = preds.to(torch.device('mps'))
+        if torch.cuda.is_available():
+            preds = preds.cuda() 
 
         golds = golds.cpu()
         golds.apply_(lambda x: self.labels_mapping[x])
-        golds = golds.cuda()
+        if torch.backends.mps.is_available():
+            golds = golds.to(torch.device('mps'))
+        if torch.cuda.is_available():
+            golds = golds.cuda()
 
         # print(golds)
         # print(preds)
