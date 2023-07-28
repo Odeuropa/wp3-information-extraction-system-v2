@@ -34,6 +34,8 @@ if len(args.file_paths) % 2 == 1:
 
 if args.device == None:
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
+elif args.device == 1:
+    device = "mps:0" if torch.backends.mps.is_available() else "cpu"    
 elif args.device == -1:
     device = 'cpu'
 else:
