@@ -34,7 +34,7 @@ python3 books_converter-filter.py --folder books_folder --output output_folder -
 
 The folder `run-predictions`  contains the classifier (`predict.py`) to extract the smell sources from the books converted in the previous step.
 
-Before running the script download the model in your language form here https://drive.google.com/drive/u/1/folders/1HRfiE3atNbXHIfj8mjXNiPJPZCxSmHky and move it in `run-predictions/models` folder.
+Before running the script download the model in your language form here https://zenodo.org/records/10598306 and move it in `run-predictions/models` folder.
 
 The code has ben tested with python 3.8. To install the required packages, in `run-predictions` folder run:
 ```
@@ -78,7 +78,11 @@ Usage example:
 python3 extract-annotations.py --folder ../run-predictions/predictions/ --output test-frames.tsv
 ```
 
+## Publication
 
+If you use this resource, please cite:
+
+`Menini, Stefano. Semantic Frame Extraction in Multilingual Olfactory Events. In Proceedings of LREC-Coling 2024`
 
 ## Funding acknowledgement
 
